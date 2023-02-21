@@ -1,6 +1,12 @@
 // function to generate markdown for README
-function generateMarkdown(data) {return `
+function generateMarkdown(data) {
+  return `
   # ${data.title}
+
+  ${addBadge(data.license)}
+
+  ## Description
+${data.description}
 
 ## Table of Contents
 * [Description](#description)
@@ -11,11 +17,6 @@ function generateMarkdown(data) {return `
 * [License](#license)
 * [Link](#link)
 * [Questions](#questions)
-
-${addBadge(data.license)}
-
-## Description
-${data.description}
 
 ## Installation 
 ${data.installation}
@@ -45,17 +46,19 @@ If you have any questions, you can reach me:
 
 module.exports = generateMarkdown;
 
-function addBadge(license) {
-  switch (license) {
-    case 'Apache License v2.0':
-      return `![Apache badge](https://img.shields.io/badge/License-Apache%202.0-blue.svg)`;
-    case 'General Public License v3.0':
-      return `![GPL v3 badge](https://img.shields.io/badge/License-GPLv3-blue.svg)`;
-    case 'General Public License v2.0':
-      return `![GPL v2 badge](https://img.shields.io/badge/License-GPL%20v2-blue.svg)`;
-    case 'MIT License':
-      return `![MIT badge](https://img.shields.io/badge/License-MIT-yellow.svg)`;
-    default:
-      return '';
-  }
-}
+const addBadge = licenseChoice => 
+  licenseChoice == 'MIT License' ? `
+  ![MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+` :
+  licenseChoice == 'Apache License v2.0' ? `
+  ![Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)
+  ` :
+  licenseChoice == 'General Public License v3.0' ? `
+  ![mit](https://img.shields.io/badge/License-GPLv3-blue.svg)
+  ` :
+  licenseChoice == 'General Public License v2.0' ? `
+  ![BSD 2-Clause](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)
+  ` :
+   `
+No license selected
+  `;

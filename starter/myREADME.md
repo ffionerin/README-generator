@@ -1,5 +1,12 @@
 
-  # q
+  # v
+
+  
+  ![MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
+
+  ## Description
+v
 
 ## Table of Contents
 * [Description](#description)
@@ -11,31 +18,26 @@
 * [Link](#link)
 * [Questions](#questions)
 
-
-
-## Description
-q
-
 ## Installation 
-q
+v
 
 ## Contributing 
-q
+v
 
 ## Tests 
-q
+v
 
 ## License
 
-This application is covered by the 
+This application is covered by the MIT License
 
 ## Link
 
-You can find the deployed website at q
+You can find the deployed website at v
 
 ## Questions
 If you have any questions, you can reach me:
 
-* At my Github profile: https://github.com/q/
-* Via email at q
+* At my Github profile: https://github.com/v/
+* Via email at v
 
