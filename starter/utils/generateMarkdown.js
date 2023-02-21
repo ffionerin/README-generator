@@ -1,6 +1,6 @@
 // function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.title}
+function generateMarkdown(data) {return `
+  # ${data.title}
 
 ## Table of Contents
 * [Description](#description)
@@ -12,7 +12,7 @@ function generateMarkdown(data) {
 * [Link](#link)
 * [Questions](#questions)
 
-// add licence badge here
+${addBadge(data.license)}
 
 ## Description
 ${data.description}
@@ -28,7 +28,7 @@ ${data.test}
 
 ## License
 
-This application is covered by the ${data.licence}
+This application is covered by the ${data.license}
 
 ## Link
 
@@ -45,4 +45,17 @@ If you have any questions, you can reach me:
 
 module.exports = generateMarkdown;
 
-
+function addBadge(license) {
+  switch (license) {
+    case 'Apache License v2.0':
+      return `![Apache badge](https://img.shields.io/badge/License-Apache%202.0-blue.svg)`;
+    case 'General Public License v3.0':
+      return `![GPL v3 badge](https://img.shields.io/badge/License-GPLv3-blue.svg)`;
+    case 'General Public License v2.0':
+      return `![GPL v2 badge](https://img.shields.io/badge/License-GPL%20v2-blue.svg)`;
+    case 'MIT License':
+      return `![MIT badge](https://img.shields.io/badge/License-MIT-yellow.svg)`;
+    default:
+      return '';
+  }
+}
