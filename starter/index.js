@@ -30,27 +30,17 @@ message: 'If you would like to include your GitHub username in the questions sec
 ];
 
 
-function init() {
-    inquirer.prompt(questions)
-    // .then((responses) => {
-    //     console.log("Creating Professional README.md File...");
-    //     writeToFile(".README.md", generateMarkdown({ ...responses }));
-      };
-
-      init();
-
-
-
-
-
-// // function to write README file
-// function writeToFile(fileName, data) {
-// }
-
-// // function to initialize program
-// function init() {
-
-// }
-
-// // function call to initialize program
-// init();
+// function to write README file
+function writeToFile(fileName, data) {
+    fs.writeFileSync(path.join(process.cwd(), fileName), data);
+  }
+  
+  // function to initialize program
+  function init() {
+    inquirer.prompt(questions).then((inquirerResponses) => {
+      writeToFile("myREADME.md", generateMarkdown({...inquirerResponses}));
+    });
+  }
+  
+  // function call to initialize program
+  init();
