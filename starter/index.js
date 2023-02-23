@@ -3,13 +3,6 @@ const path = require('path');
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
 
-const licenseChoices = [
-    { name: 'Apache License v2.0', value: 'Apache License v2.0' },
-    { name: 'General Public License v3.0', value: 'General Public License v3.0' },
-    { name: 'General Public License v2.0', value: 'General Public License v2.0' },
-    { name: 'MIT License', value: 'MIT License' },
-  ];
-
 // array of questions for user
 const questions = [
     {
