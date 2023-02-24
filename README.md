@@ -23,6 +23,8 @@ This is a command-line application. It can be used by running node on the index.
 
 Please see walkthrough video below
 
+[Walkthrough video.webm](https://user-images.githubusercontent.com/117778427/221285068-79cd6511-92f9-44e0-ad78-8cea78651586.webm)
+
 ## Questions
 If you have any questions, you can reach me at my GitHub profile: https://github.com/ffionerin
 
