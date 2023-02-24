@@ -37,9 +37,9 @@ const questions = [
     },
     {
         type: 'checkbox',
-        name: 'license',
+        name: 'licenseChoices',
         message: 'Please select a license from the list below:',
-        choices: licenseChoices
+        choices: ['MIT License', 'Apache License v2.0', 'General Public License v3.0', 'General Public License v2.0']
     },
     {
         type: 'input',
@@ -52,7 +52,6 @@ const questions = [
         message: 'If you would like to include your GitHub username in the questions section, please enter it now:'
     },
 ];
-
 
 // function to write README file
 function writeToFile(fileName, data) {
