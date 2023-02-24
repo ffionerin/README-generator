@@ -6,7 +6,7 @@
 
 
   ## Description
-A simple web app which includes a quiz to test sudents knowledge of CSS, HTML and JavaScript
+A simple web app which includes a quiz to test students knowledge of CSS, HTML and JavaScript
 
 ## Table of Contents
 * [Description](#description)

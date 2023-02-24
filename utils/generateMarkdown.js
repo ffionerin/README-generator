@@ -2,8 +2,11 @@
 // function to generate markdown for README
 function generateMarkdown(data) {
 
+  // variable to hold the badge data
   const badge = addBadge(data.licenseChoices);
 
+  // returning a string in a markdown format
+  // uses template literals to do this
   return `
   # ${data.title}
 
@@ -50,7 +53,7 @@ If you have any questions, you can reach me:
 
 module.exports = generateMarkdown;
 
-// variable to store appropriate badge depending on licence choice
+// arrow function that returns a badge depending on selected license and saves it to addBadge variable
 const addBadge = licenseChoices => 
   licenseChoices == 'MIT License' ? `
   ![MIT badge](https://img.shields.io/badge/License-MIT-yellow.svg)
